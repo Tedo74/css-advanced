@@ -21,7 +21,7 @@ Dark green:#28b485;
 }
 
 html {
-  font: normal 10px/1.7 'Lato', sans-serif;
+  font: normal 62.5%/1.7 'Lato', sans-serif;
   box-sizing: border-box;
 }
 
@@ -49,19 +49,19 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
   /* background-color: lawngreen; */
 }
 
-.logo {
+header__.logo {
   height: 3.5rem;
   width: auto;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -76,7 +76,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   text-transform: uppercase;
   display: block;
   font-size: 6rem;
@@ -86,7 +86,7 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   letter-spacing: 1.96rem;
@@ -106,6 +106,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
@@ -136,17 +137,17 @@ body {
   opacity: 0;
 }
 
-.btn-primary {
+.btn--primary {
   background-color: var(--button-primary-background);
   color: var(--button-primary-color);
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 1s ease-out 1s;
   animation-fill-mode: backwards;
 }
 
-.btn-primary::after {
+.btn--primary::after {
   background-color: #fff;
 }
 
