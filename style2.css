@@ -14,114 +14,11 @@ body {
   color: #777;
   padding: 3rem; }
 
-.header {
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-  /* background-color: lawngreen; */ }
-
-.header__logo {
-  height: 3.5rem;
-  width: auto; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  font-weight: 400;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-
-.heading-primary--main {
-  text-transform: uppercase;
-  display: block;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  animation-name: moveInleft;
-  animation-duration: 2s;
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  letter-spacing: 1.96rem;
-  font-weight: 700;
-  animation: moveInRight 2s ease-out; }
-
-/* Buttons */
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none; }
-
-.btn {
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-size: 1.6rem; }
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); }
-
-.btn::after {
-  content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  /* background-color: royalblue; */
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s; }
-
-.btn:hover::after {
-  transform: scaleY(1.6) scaleX(1.4);
-  opacity: 0; }
-
-.btn--primary {
-  background-color: var(--button-primary-background);
-  color: var(--button-primary-color); }
-
-.btn--animated {
-  animation: moveInBottom 1s ease-out 1s;
-  animation-fill-mode: backwards; }
-
-.btn--primary::after {
-  background-color: #fff; }
-
 /* Animations */
 @keyframes moveInleft {
   0% {
     opacity: 0;
     transform: translateX(-10rem); }
-  /* 80% {
-      transform: translateX(22px);
-    } */
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -130,9 +27,6 @@ body {
   0% {
     opacity: 0;
     transform: translateX(10rem); }
-  /* 80% {
-      transform: translateX(-22px);
-    } */
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -144,3 +38,129 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+.heading-primary {
+  color: #fff;
+  font-weight: 400;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    text-transform: uppercase;
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    animation-name: moveInleft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.96rem;
+    font-weight: 700;
+    animation: moveInRight 2s ease-out; }
+
+.headding-secondary {
+  display: inline-block;
+  font-style: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .headding-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+/* Buttons */
+.btn {
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem; }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleY(1.6) scaleX(1.4);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+  .btn--primary {
+    background-color: #fff;
+    color: #777; }
+    .btn--primary::after {
+      background-color: #fff; }
+  .btn--animated {
+    animation: moveInBottom 1s ease-out 1s;
+    animation-fill-mode: backwards; }
+
+.row {
+  box-sizing: border-box;
+  max-width: 114rem;
+  background-color: #eeeeee;
+  margin: 0 auto; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 80px; }
+  .row .column-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    float: left;
+    background-color: orange; }
+    .row .column-1-of-2:not(:last-child) {
+      margin-right: 6rem;
+      background-color: palegreen; }
+  .row .column-1-of-3 {
+    width: calc((100% - 6rem* 2) / 3);
+    float: left;
+    background-color: orange; }
+    .row .column-1-of-3:not(:last-child) {
+      margin-right: 6rem;
+      background-color: palegreen; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    width: auto; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
